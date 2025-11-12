@@ -14,11 +14,6 @@
 
     "content_scripts": [
         {
-            "matches": ["https://www.clien.net/service/board/jirum/*"],
-            "js": ["scripts/clien-content.js"],
-            "run_at": "document_end"
-        },
-        {
             "matches": ["https://campaign2.naver.com/*"],
             "js": ["scripts/naverpay-content.js"],
             "run_at": "document_end"
