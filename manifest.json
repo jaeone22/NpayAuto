@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "NpayAuto",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "클리앙 네이버페이 포인트 게시물에서 자동으로 링크를 열고, 사용자 조작 없이도 적립을 수행합니다.",
 
     "permissions": ["tabs", "activeTab", "storage"],
