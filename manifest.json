@@ -6,7 +6,7 @@
 
     "permissions": ["tabs", "activeTab", "scripting", "storage"],
 
-    "host_permissions": ["https://www.clien.net/*", "https://campaign2.naver.com/*"],
+    "host_permissions": ["https://www.clien.net/*", "https://campaign2.naver.com/*", "https://ofw.adison.co/*"],
 
     "background": {
         "scripts": ["scripts/background.js"]

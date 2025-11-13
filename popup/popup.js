@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function findNaverPayLinks() {
     const links = [];
-    const linkElements = document.querySelectorAll('a[href*="campaign2.naver.com"]');
+    const linkElements = document.querySelectorAll('a[href*="campaign2.naver.com"], a[href*="ofw.adison.co"]');
 
     linkElements.forEach((element) => {
         const url = element.href;
         const title = element.textContent.trim() || element.title || "네이버페이 링크";
 
-        if (url && url.includes("campaign2.naver.com")) {
+        if (url && (url.includes("campaign2.naver.com") || url.includes("ofw.adison.co"))) {
             links.push({ url, title });
         }
     });
