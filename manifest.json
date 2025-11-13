@@ -1,15 +1,14 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "NpayAuto",
     "version": "1.0.0",
     "description": "클리앙 네이버페이 포인트 게시물에서 자동으로 링크를 열고, 사용자 조작 없이도 적립을 수행합니다.",
 
-    "permissions": ["tabs", "activeTab", "scripting", "storage"],
-
-    "host_permissions": ["https://www.clien.net/*", "https://campaign2.naver.com/*", "https://ofw.adison.co/*"],
+    "permissions": ["tabs", "activeTab", "storage"],
 
     "background": {
-        "scripts": ["scripts/background.js"]
+        "scripts": ["scripts/background.js"],
+        "persistent": false
     },
 
     "content_scripts": [
@@ -20,7 +19,7 @@
         }
     ],
 
-    "action": {
+    "browser_action": {
         "default_popup": "popup/popup.html",
         "default_title": "NPayAuto",
         "default_icon": {
@@ -34,5 +33,14 @@
         "16": "icons/16.png",
         "48": "icons/48.png",
         "128": "icons/128.png"
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "@extension-without-data-collection",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
+        }
     }
 }
